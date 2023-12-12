@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Unosquare.PassCore.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Unosquare.PassCore.Common.ApiErrorCode">
+            <summary>
+            Represents API error codes.
+            </summary>
+        </member>
+        <member name="F:Unosquare.PassCore.Common.ApiErrorCode.Generic">
+            <summary>
+            The generic
+            </summary>
+        </member>
+        <member name="F:Unosquare.PassCore.Common.ApiErrorCode.FieldRequired">
+            <summary>
+            The field required
+            </summary>
+        </member>
+        <member name="F:Unosquare.PassCore.Common.ApiErrorCode.FieldMismatch">
+            <summary>
+            The field mismatch
+            </summary>
+        </member>
+        <member name="F:Unosquare.PassCore.Common.ApiErrorCode.UserNotFound">
+            <summary>
+            The user not found
+            </summary>
+        </member>
+        <member name="F:Unosquare.PassCore.Common.ApiErrorCode.InvalidCredentials">
+            <summary>
+            The invalid credentials
+            </summary>
+        </member>
+        <member name="F:Unosquare.PassCore.Common.ApiErrorCode.InvalidCaptcha">
+            <summary>
+            The invalid captcha
+            </summary>
+        </member>
+        <member name="F:Unosquare.PassCore.Common.ApiErrorCode.ChangeNotPermitted">
+            <summary>
+            The change not permitted
+            </summary>
+        </member>
+        <member name="F:Unosquare.PassCore.Common.ApiErrorCode.InvalidDomain">
+            <summary>
+            The invalid domain
+            </summary>
+        </member>
+        <member name="T:Unosquare.PassCore.Common.ApiErrorException">
+            <inheritdoc />
+            <summary>
+            Special Exception to transport the ApiErrorItem.
+            </summary>
+        </member>
+        <member name="M:Unosquare.PassCore.Common.ApiErrorException.#ctor(System.String,Unosquare.PassCore.Common.ApiErrorCode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.PassCore.Common.ApiErrorException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="errorCode">The error code.</param>
+        </member>
+        <member name="P:Unosquare.PassCore.Common.ApiErrorException.ErrorCode">
+            <summary>
+            Gets or sets the error code.
+            </summary>
+            <value>
+            The error code.
+            </value>
+        </member>
+        <member name="P:Unosquare.PassCore.Common.ApiErrorException.Message">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.PassCore.Common.ApiErrorException.ToApiErrorItem">
+            <summary>
+            To the API error item.
+            </summary>
+            <returns>An API Error Item.</returns>
+        </member>
+        <member name="T:Unosquare.PassCore.Common.ApiErrorItem">
+            <summary>
+            Defines the fields contained in one of the items of Api Errors.
+            </summary>
+        </member>
+        <member name="M:Unosquare.PassCore.Common.ApiErrorItem.#ctor(Unosquare.PassCore.Common.ApiErrorCode,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.PassCore.Common.ApiErrorItem" /> class.
+            </summary>
+            <param name="errorCode">The error code.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="P:Unosquare.PassCore.Common.ApiErrorItem.ErrorCode">
+            <summary>
+            Gets or sets the error code.
+            </summary>
+            <value>
+            The error code.
+            </value>
+        </member>
+        <member name="P:Unosquare.PassCore.Common.ApiErrorItem.FieldName">
+            <summary>
+            Gets or sets the name of the field.
+            </summary>
+            <value>
+            The name of the field.
+            </value>
+        </member>
+        <member name="P:Unosquare.PassCore.Common.ApiErrorItem.Message">
+            <summary>
+            Gets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="T:Unosquare.PassCore.Common.IAppSettings">
+            <summary>
+            Interface for any Application provider.
+            </summary>
+        </member>
+        <member name="P:Unosquare.PassCore.Common.IAppSettings.DefaultDomain">
+            <summary>
+            Gets or sets the default domain.
+            </summary>
+            <value>
+            The default domain.
+            </value>
+        </member>
+        <member name="P:Unosquare.PassCore.Common.IAppSettings.LdapPort">
+            <summary>
+            Gets or sets the LDAP port.
+            </summary>
+            <remarks>
+            Optional, defaults to 636 -- the default port for LDAPS (i.e. LDAP over TLS).
+            A common alternative is to use the default LDAP port, 389, however this port
+            typically is not-secured and requires the "StartTLS" flag enabled.
+            </remarks>
+            <value>
+            The LDAP port.
+            </value>
+        </member>
+        <member name="P:Unosquare.PassCore.Common.IAppSettings.LdapHostnames">
+            <summary>
+            Gets or sets the LDAP hostnames.
+            </summary>
+            <remarks>
+             Required, one or more hostnames or IP addresses which expose an LDAP/LDAPS
+            service endpoint that will be connected to.  If more than one host is
+            specified, then each will be tried in turn until a successful, secure
+            connection is established.
+            </remarks>
+            <value>
+            The LDAP hostnames.
+            </value>
+        </member>
+        <member name="P:Unosquare.PassCore.Common.IAppSettings.LdapPassword">
+            <summary>
+            Gets or sets the LDAP password.
+            </summary>
+            <value>
+            The LDAP password.
+            </value>
+        </member>
+        <member name="P:Unosquare.PassCore.Common.IAppSettings.LdapUsername">
+            <summary>
+            Gets or sets the LDAP username.
+            </summary>
+            <value>
+            The LDAP username.
+            </value>
+        </member>
+        <member name="T:Unosquare.PassCore.Common.IPasswordChangeProvider">
+            <summary>
+            Represents a interface for a password change provider.
+            </summary>
+        </member>
+        <member name="M:Unosquare.PassCore.Common.IPasswordChangeProvider.PerformPasswordChange(System.String,System.String,System.String)">
+            <summary>
+            Performs the password change using the credentials provided.
+            </summary>
+            <param name="username">The username.</param>
+            <param name="currentPassword">The current password.</param>
+            <param name="newPassword">The new password.</param>
+            <returns>The API error item or null if the change password operation was successful.</returns>
+        </member>
+    </members>
+</doc>

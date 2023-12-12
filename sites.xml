@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appcmd>
+    <SITE SITE.NAME="passcore" SITE.ID="2" bindings="https/*:443:ad" state="Stopped">
+        <site name="passcore" id="2" serverAutoStart="false">
+            <bindings>
+                <binding protocol="https" bindingInformation="*:443:ad" sslFlags="0" />
+            </bindings>
+            <limits />
+            <logFile>
+                <customFields>
+                </customFields>
+            </logFile>
+            <traceFailedRequestsLogging />
+            <applicationDefaults />
+            <virtualDirectoryDefaults />
+            <ftpServer>
+                <connections />
+                <security>
+                    <dataChannelSecurity />
+                    <commandFiltering>
+                    </commandFiltering>
+                    <ssl />
+                    <sslClientCertificates />
+                    <authentication>
+                        <anonymousAuthentication />
+                        <basicAuthentication />
+                        <clientCertAuthentication />
+                        <customAuthentication>
+                            <providers>
+                            </providers>
+                        </customAuthentication>
+                    </authentication>
+                    <customAuthorization>
+                        <provider />
+                    </customAuthorization>
+                </security>
+                <customFeatures>
+                    <providers>
+                    </providers>
+                </customFeatures>
+                <messages />
+                <fileHandling />
+                <firewallSupport />
+                <userIsolation>
+                    <activeDirectory />
+                </userIsolation>
+                <directoryBrowse />
+                <logFile />
+            </ftpServer>
+            <application path="/" applicationPool="Passcore Pool PS">
+                <virtualDirectoryDefaults />
+                <virtualDirectory path="/" physicalPath="D:\web\passcore" />
+            </application>
+        </site>
+    </SITE>
+    <SITE SITE.NAME="resetpasswd" SITE.ID="1" bindings="https/*:8443:" state="Started">
+        <site name="resetpasswd" id="1" serverAutoStart="true">
+            <bindings>
+                <binding protocol="https" bindingInformation="*:8443:" sslFlags="0" />
+            </bindings>
+            <limits />
+            <logFile>
+                <customFields>
+                </customFields>
+            </logFile>
+            <traceFailedRequestsLogging />
+            <applicationDefaults />
+            <virtualDirectoryDefaults />
+            <ftpServer>
+                <connections />
+                <security>
+                    <dataChannelSecurity />
+                    <commandFiltering>
+                    </commandFiltering>
+                    <ssl />
+                    <sslClientCertificates />
+                    <authentication>
+                        <anonymousAuthentication />
+                        <basicAuthentication />
+                        <clientCertAuthentication />
+                        <customAuthentication>
+                            <providers>
+                            </providers>
+                        </customAuthentication>
+                    </authentication>
+                    <customAuthorization>
+                        <provider />
+                    </customAuthorization>
+                </security>
+                <customFeatures>
+                    <providers>
+                    </providers>
+                </customFeatures>
+                <messages />
+                <fileHandling />
+                <firewallSupport />
+                <userIsolation>
+                    <activeDirectory />
+                </userIsolation>
+                <directoryBrowse />
+                <logFile />
+            </ftpServer>
+            <application path="/" applicationPool="resetpasswd">
+                <virtualDirectoryDefaults />
+                <virtualDirectory path="/" physicalPath="D:\Web\resetpasswd" />
+            </application>
+        </site>
+    </SITE>
+    <SITE SITE.NAME="resetpasswd-web" SITE.ID="3" bindings="http/*:80:ad.inpark.kr,https/*:443:ad.inpark.kr" state="Started">
+        <site name="resetpasswd-web" id="3" serverAutoStart="true">
+            <bindings>
+                <binding protocol="http" bindingInformation="*:80:ad.inpark.kr" />
+                <binding protocol="https" bindingInformation="*:443:ad.inpark.kr" sslFlags="1" />
+            </bindings>
+            <limits />
+            <logFile>
+                <customFields>
+                </customFields>
+            </logFile>
+            <traceFailedRequestsLogging />
+            <applicationDefaults />
+            <virtualDirectoryDefaults />
+            <ftpServer>
+                <connections />
+                <security>
+                    <dataChannelSecurity />
+                    <commandFiltering>
+                    </commandFiltering>
+                    <ssl />
+                    <sslClientCertificates />
+                    <authentication>
+                        <anonymousAuthentication />
+                        <basicAuthentication />
+                        <clientCertAuthentication />
+                        <customAuthentication>
+                            <providers>
+                            </providers>
+                        </customAuthentication>
+                    </authentication>
+                    <customAuthorization>
+                        <provider />
+                    </customAuthorization>
+                </security>
+                <customFeatures>
+                    <providers>
+                    </providers>
+                </customFeatures>
+                <messages />
+                <fileHandling />
+                <firewallSupport />
+                <userIsolation>
+                    <activeDirectory />
+                </userIsolation>
+                <directoryBrowse />
+                <logFile />
+            </ftpServer>
+            <application path="/" applicationPool="resetpasswd-web">
+                <virtualDirectoryDefaults />
+                <virtualDirectory path="/" physicalPath="D:\Web\resetpasswd-web" />
+            </application>
+        </site>
+    </SITE>
+    <SITE SITE.NAME="dev-resetpasswd" SITE.ID="5" bindings="https/*:9443:" state="Stopped">
+        <site name="dev-resetpasswd" id="5" serverAutoStart="false">
+            <bindings>
+                <binding protocol="https" bindingInformation="*:9443:" sslFlags="0" />
+            </bindings>
+            <limits />
+            <logFile>
+                <customFields>
+                </customFields>
+            </logFile>
+            <traceFailedRequestsLogging />
+            <applicationDefaults />
+            <virtualDirectoryDefaults />
+            <ftpServer>
+                <connections />
+                <security>
+                    <dataChannelSecurity />
+                    <commandFiltering>
+                    </commandFiltering>
+                    <ssl />
+                    <sslClientCertificates />
+                    <authentication>
+                        <anonymousAuthentication />
+                        <basicAuthentication />
+                        <clientCertAuthentication />
+                        <customAuthentication>
+                            <providers>
+                            </providers>
+                        </customAuthentication>
+                    </authentication>
+                    <customAuthorization>
+                        <provider />
+                    </customAuthorization>
+                </security>
+                <customFeatures>
+                    <providers>
+                    </providers>
+                </customFeatures>
+                <messages />
+                <fileHandling />
+                <firewallSupport />
+                <userIsolation>
+                    <activeDirectory />
+                </userIsolation>
+                <directoryBrowse />
+                <logFile />
+            </ftpServer>
+            <application path="/" applicationPool="dev-resetpasswd">
+                <virtualDirectoryDefaults />
+                <virtualDirectory path="/" physicalPath="D:\Web-Dev\resetpasswd" />
+            </application>
+        </site>
+    </SITE>
+    <SITE SITE.NAME="dev-resetpasswd-web" SITE.ID="4" bindings="https/*:9000:" state="Stopped">
+        <site name="dev-resetpasswd-web" id="4" serverAutoStart="false">
+            <bindings>
+                <binding protocol="https" bindingInformation="*:9000:" sslFlags="0" />
+            </bindings>
+            <limits />
+            <logFile>
+                <customFields>
+                </customFields>
+            </logFile>
+            <traceFailedRequestsLogging />
+            <applicationDefaults />
+            <virtualDirectoryDefaults />
+            <ftpServer>
+                <connections />
+                <security>
+                    <dataChannelSecurity />
+                    <commandFiltering>
+                    </commandFiltering>
+                    <ssl />
+                    <sslClientCertificates />
+                    <authentication>
+                        <anonymousAuthentication />
+                        <basicAuthentication />
+                        <clientCertAuthentication />
+                        <customAuthentication>
+                            <providers>
+                            </providers>
+                        </customAuthentication>
+                    </authentication>
+                    <customAuthorization>
+                        <provider />
+                    </customAuthorization>
+                </security>
+                <customFeatures>
+                    <providers>
+                    </providers>
+                </customFeatures>
+                <messages />
+                <fileHandling />
+                <firewallSupport />
+                <userIsolation>
+                    <activeDirectory />
+                </userIsolation>
+                <directoryBrowse />
+                <logFile />
+            </ftpServer>
+            <application path="/" applicationPool="dev-resetpasswd-web">
+                <virtualDirectoryDefaults />
+                <virtualDirectory path="/" physicalPath="D:\Web-Dev\resetpasswd-web" />
+            </application>
+        </site>
+    </SITE>
+</appcmd>
